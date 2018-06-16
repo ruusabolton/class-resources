@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Media Grid</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+    /*GRID LAYOUT CSS*!*/
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        box-sizing: border-box;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        height: 100vh;
+        min-width: 768px;
+    }
+
+    .row {
+        width: 100%;
+
+    }
+
+    .column {
+        /*background-color: lightgrey;
+        border: 1px solid black;*/
+        margin: 20px 0;
+        float: left;
+        padding: 10px 1px;
+
+
+    }
+
+    .one-half {
+        width: calc(50% - 4px);
+    }
+
+    .one-third {
+        width: calc(33.333333% - 4px);
+
+    }
+
+    .one-fourth {
+        width: calc(25% - 4px);
+    }
+
+    .one-sixth {
+        width: calc(16.6667% - 4px);
+    }
+
+    .one-eighth {
+        width: calc(12.5% - 4px);
+    }
+
+
+    @media screen and (min-width: 768px) {
+        column.one-half, column.one-fourth, column.one-sixth, column.one-eighth {
+            width: 100%;
+        }
+    }
+    /* mobile view */
+    body {
+        margin: 20px;
+        font-family: Helvetica;
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        /*width: 100%;*/
+    }
+
+    i {
+        font-size: 2.5em;
+    }
+
+    .alert-info a {
+        background-color: rgb(204 255 254);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        padding: 15px;
+        border: 2px solid rgb(193 193 193);
+
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+        background: rgb(193 193 193);
+        margin-bottom: 10px;
+        padding: 15px 0;
+
+    }
+
+    .sub-section {
+        font-style: italic;
+    }
+
+    /* social media links */
+    #social-media-links {
+        float: right;
+    }
+    #social-media-links a {
+        margin-right: 10px;
+    }
+    i {
+        font-size: 2.5em;
+        color: grey;
+    }
+
+    footer {
+        height: 200px;
+    }
+
+
+    footer p {
+        float: left;
+    }
+
+
+
+    /* desktop view */
+    @media screen and (min-width:768px) {
+
+        /*!* heading *!*/
+        h1 {
+            float: left;
+        }
+
+        /* hide button */
+        .hidden-on-desktop {
+            display: none;
+        }
+
+        /* nav links styling */
+        .nav-links {
+            float: right;
+            position: absolute;
+            margin: 0;
+            top: 40px;
+            right: 0;
+        }
+
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .nav-links li a {
+            padding: 0;
+            background: inherit;
+            display: inline-block;
+            margin: 0;
+        }
+
+        /* section styling */
+        section {
+            float: left;
+            padding: 0 10px;
+        }
+        .sub-section {
+            /*width: 33.33%;*/
+            box-sizing: border-box;
+        }
+        .main {
+            /*width: 66.66%;*/
+            padding: 0;
+            padding-right: 2em;
+            box-sizing: border-box;
+        }
+
+        /* footer styling */
+        footer {
+            margin-top: 300px;
+        }
+
+
+
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+<container>
+
+
+<div class="container">
+
+    <div class=" alert-info hidden-on-desktop">
+        <a href="#main">Skip to main content</a>
+    </div>
+
+<div class="row"><div><h1>Company</h1></div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+    <div class="row">
+        <div class="column">
+            <div class="header-img">
+                <img src="../../../IdeaProjects/codeup-web-exercises/img/sky.png" alt="">
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="column one-half">
+            <section id="main" class="main">
+                <h2>Main Section</h2>
+                    <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
+            </section>
+        </div>
+
+        <div class="column one-half">
+
+            <section class="sub-section">
+            <h2>Sub-section</h2>
+            <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
+            </section>
+        </div>
+    </div>
+    </div>
+
+    </div>
+<footer>
+    <p>(c) 2017 All rights reserved</p>
+    <div id="social-media-links">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+</footer>
+
+</container>
+</body>
+</html>
